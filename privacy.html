@@ -27,8 +27,8 @@
         <li>Audio recordings you make for analysis</li>
         <li>Transcripts, scores and feedback for your answers</li>
         <li>Voice measurements from your recordings: how much your pitch moves and how your volume changes, relative to your own voice (not a voiceprint)</li>
-        <li>Your interview setups (field, role and interviewer style; up to 3), and a company name and job posting for each if you add them. Your setups, question lists, company names and job postings are kept on your phone; only the setup in use (field, role and interviewer style) is stored with your account. The company and job posting are sent to Anthropic with your answers and question requests (with your current question list when you ask for a new set); they are not stored with your results.</li>
-        <li>Questions you type are stored with your answers, like any question you practice.</li>
+        <li>Your interview setups (field, role and interviewer style; up to 3), and a company name and job posting for each if you add them. Your setups, question lists, company names and job postings are kept on your phone; only the setup in use (field, role and interviewer style) is stored with your account, along with the one used for each AI conversation or mock interview. The company and job posting are sent to Anthropic with your answers and question requests (with your current question list when you ask for a new set). They are not stored on their own, but questions and feedback written for that job, which can name the company, are stored with your results.</li>
+        <li>Questions you type are stored with your answers, like any question you practice, and with any mock interview that asks them.</li>
         <li>Your interview date, if you add one</li>
         <li>The one skill you're working on and how it's going, worked out from your results</li>
         <li>Conversation answers and the AI's replies</li>
@@ -60,7 +60,7 @@
       <p>Before anything is sent to an AI service, the app asks for your permission. You can withdraw it at any time in Profile &rarr; AI processing; nothing more is sent after that.</p>
       <ul>
         <li><strong>AssemblyAI</strong> receives your voice recordings and turns them into text, with filler words and timing. We delete each transcript from AssemblyAI as soon as the analysis is done.</li>
-        <li><strong>Anthropic (Claude)</strong> receives your transcripts, interview setup (including any company and job posting you add), conversation answers and short notes from your earlier answers (the skill you're working on, the advice you were given last time on the same question, your measured pace and filler rate, and which STAR parts that answer had), and writes your feedback, questions and replies.</li>
+        <li><strong>Anthropic (Claude)</strong> receives your transcripts and the questions you answer (including ones you type), interview setup (including any company and job posting you add), conversation answers and short notes from your earlier answers (the skill you're working on and where you started on it, the advice you were given last time on the same question, your measured pace and filler rate, and which STAR parts that answer had), and writes your feedback, questions and replies.</li>
       </ul>
     </div>
 
@@ -78,7 +78,7 @@
 
     <div class="section">
       <h2>5. Data Storage &amp; Security</h2>
-      <p>Your data is stored in Google Firebase. Audio recordings are stored in Firebase Cloud Storage with access restricted to your account. Your profile photo is stored at an unlisted web address so the app can show it; anyone given that address could open it. Data is encrypted in transit and at rest.</p>
+      <p>Your data is stored in Google Firebase. Audio recordings are stored in Firebase Cloud Storage. The app plays each one through an unlisted web address given only to your account; anyone given that address could play the recording. Your profile photo is stored at an unlisted web address so the app can show it; anyone given that address could open it. Data is encrypted in transit and at rest.</p>
     </div>
 
     <div class="section">
