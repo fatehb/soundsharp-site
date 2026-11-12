@@ -44,6 +44,21 @@
       <p>In the app, go to <strong>Profile → Delete Account</strong>. This permanently removes your account, recordings and analysis history. Deleting your account does not cancel an App Store subscription; cancel it in Settings as described above.</p>
     </div>
 
+    <!-- The job link reader's User-Agent links to support.html#job-links: keep this id. -->
+    <div class="section" id="job-links">
+      <h2>How Sound Sharp reads job links</h2>
+      <p>When someone gives Sound Sharp a link to a job posting, Sound Sharp's server opens that one page, once, at their request, to read the job description. It never goes back to the page on its own, follows the page's other links or crawls the site.</p>
+      <ul>
+        <li>Its requests identify themselves as <code>SoundSharp/1.0</code> in the User-Agent, with a link to this section.</li>
+        <li>It follows robots.txt, checked before the page and again on each redirect, and remembered for up to a day. A site can refuse it with a <code>User-agent: SoundSharp</code> group (for example, followed by <code>Disallow: /</code>); without one, the rules for all robots (<code>User-agent: *</code>) apply. If a site has no robots.txt, or it can't be read, the page is read.</li>
+        <li>Some job-board systems publish their postings through a public jobs API. For a posting on one of them, it reads that posting from the API instead of the page, without a robots.txt check; if that doesn't work, it reads the page as above.</li>
+        <li>It never signs in and sends no cookies or anything from the person's phone. The site sees a request from Sound Sharp's server, not from their phone or their account.</li>
+        <li>It doesn't read LinkedIn, Indeed, Glassdoor, ZipRecruiter or Wellfound pages, even through a redirect. For those, the app asks the person to paste the job description instead.</li>
+        <li>Only the job description read from the page is kept with the person's account (with the link and the job details they confirm), with email addresses and phone numbers removed, and only once they save the job. The page itself is never kept.</li>
+      </ul>
+      <p style="margin-top: 12px;">The <a href="privacy">Privacy Policy</a> describes how the job description is used. Questions about these requests? Email <a class="contact-email" href="mailto:fatehb91@gmail.com">fatehb91@gmail.com</a>.</p>
+    </div>
+
     <div class="footer">
       &copy; 2026 Sound Sharp. All rights reserved.
     </div>
